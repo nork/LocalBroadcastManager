@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 import android.view.Menu;
@@ -17,6 +19,7 @@ import android.widget.EditText;
  * 参考网址：http://www.trinea.cn/android/localbroadcastmanager-impl/
  */
 public class MainActivity extends Activity implements View.OnClickListener{
+    private String DEBUG = MainActivity.class.getName();
     private EditText content;
     private MyBroadcastReceiver receiver;
     @Override
@@ -116,4 +119,12 @@ public class MainActivity extends Activity implements View.OnClickListener{
         Intent intent = new Intent();
         sendStickyBroadcast(intent);//
     }
+
+    Handler receiveCallBackHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            Log.v(DEBUG, "receiveCallBackHandler");
+        }
+    };
 }

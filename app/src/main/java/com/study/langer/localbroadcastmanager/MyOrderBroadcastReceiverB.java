@@ -14,6 +14,5 @@ public class MyOrderBroadcastReceiverB extends BroadcastReceiver{
     public void onReceive(Context context, Intent intent) {
         Log.v(DEBUG, "this is B:msg" + intent.getStringExtra("msg") + intent.getStringExtra("next_msg") + getResultData());
         setResultData(DEBUG + "给下一个广播接收者的消息");
-        abortBroadcast();
     }
 }
