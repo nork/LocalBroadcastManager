@@ -16,6 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".MyOrderBroadcastReceiverA">
+            <intent-filter android:priority="888">
+                <action android:name="com.study.langer.orderbroadcast"></action>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".MyOrderBroadcastReceiverB">
+            <intent-filter android:priority="886">
+                <action android:name="com.study.langer.orderbroadcast"></action>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

@@ -22,5 +22,29 @@
         android:layout_width="wrap_content"
         android:layout_below="@+id/content"
         android:layout_centerHorizontal="true"
-        android:text="发送广播"/>
+        android:text="发送广播LocalBroadcastManager"/>
+
+    <Button
+        android:id="@+id/send_order_broadcast"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="发送有序广播"
+        android:layout_below="@+id/send_broadcast"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/send_stick_broadcast"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="发送粘性广播"
+        android:layout_below="@+id/send_order_broadcast"
+        android:layout_alignStart="@+id/send_order_broadcast" />
+
+    <Button
+        android:id="@+id/send_stick_order_broadcast"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="发送有序粘性广播"
+        android:layout_below="@+id/send_stick_broadcast"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
